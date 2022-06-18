@@ -1,0 +1,237 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7743,        229]
+NotebookOptionsPosition[      7383,        215]
+NotebookOutlinePosition[      7789,        231]
+CellTagsIndexPosition[      7746,        228]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"size", " ", "=", " ", "15"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tab", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{"0", ",", " ", 
+       RowBox[{"{", "size", "}"}]}], "]"}], ",", 
+     RowBox[{"{", "size", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tab", "[", 
+    RowBox[{"[", 
+     RowBox[{"3", ",", "2"}], "]"}], "]"}], "=", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tab", "[", 
+    RowBox[{"[", 
+     RowBox[{"3", ",", "13"}], "]"}], "]"}], "=", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tab", "[", 
+    RowBox[{"[", 
+     RowBox[{"5", ",", "13"}], "]"}], "]"}], "=", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tab", "[", 
+    RowBox[{"[", 
+     RowBox[{"5", ",", "15"}], "]"}], "]"}], "=", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tab", "[", 
+    RowBox[{"[", 
+     RowBox[{"10", ",", "15"}], "]"}], "]"}], "=", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"tab", "[", 
+     RowBox[{"[", 
+      RowBox[{"10", ",", "2"}], "]"}], "]"}], "=", "1"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sonHareket", "=", "\"\<bos\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SagaDogru", "[", "point_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "=", 
+        RowBox[{"point", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+       RowBox[{"y", "=", 
+        RowBox[{"point", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"sonHareket", "==", "\"\<sol\>\""}], ",", 
+        RowBox[{
+         RowBox[{"Return", "[", 
+          RowBox[{"List", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], "]"}], ";"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", 
+         RowBox[{"y", "+", "1"}]}], ",", 
+        RowBox[{"i", "<=", "size"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"tab", "[", 
+             RowBox[{"[", 
+              RowBox[{"x", ",", "i"}], "]"}], "]"}], "==", "1"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Print", "[", 
+             RowBox[{
+             "\"\<=> (\>\"", ",", "x", ",", "\"\<,\>\"", ",", "i", ",", 
+              "\"\<)\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+            RowBox[{"sonHareket", "=", "\"\<saga\>\""}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"Return", "[", 
+             RowBox[{"List", "[", 
+              RowBox[{"x", ",", "i"}], "]"}], "]"}], ";"}]}], 
+          "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}],
+       ";", "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"List", "[", 
+        RowBox[{"x", ",", "y"}], "]"}], "]"}], ";"}]}], "\[IndentingNewLine]",
+     "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"AsagiDogru", "[", "point_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "=", 
+        RowBox[{"point", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+       RowBox[{"y", "=", 
+        RowBox[{"point", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"sonHareket", "==", "\"\<yukari\>\""}], ",", 
+        RowBox[{
+         RowBox[{"Return", "[", 
+          RowBox[{"List", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], "]"}], ";"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", 
+         RowBox[{"x", "+", "1"}]}], ",", 
+        RowBox[{"i", "<=", "size"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"tab", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "y"}], "]"}], "]"}], "==", "1"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Print", "[", 
+             RowBox[{
+             "\"\< => (\>\"", ",", "i", ",", "\"\<,\>\"", ",", "y", ",", 
+              "\"\<)\>\""}], " ", "]"}], ";", "\[IndentingNewLine]", 
+            RowBox[{"sonHareket", "=", "\"\<asagi\>\""}]}]}], 
+          "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}],
+       ";", "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"List", "[", 
+        RowBox[{"x", ",", "y"}], "]"}], "]"}], ";"}]}], "\[IndentingNewLine]",
+     "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SolaDogru", "[", "point_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "=", 
+        RowBox[{"point", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+       RowBox[{"y", "=", 
+        RowBox[{"point", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"sonHareket", "==", "\"\<sag\>\""}], ",", 
+        RowBox[{
+         RowBox[{"Return", "[", 
+          RowBox[{"List", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], "]"}], ";"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", 
+         RowBox[{"y", "-", "1"}]}], ",", 
+        RowBox[{"i", "<=", "size"}], ","}], "\[IndentingNewLine]", "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8574600257152195`*^9, 3.857460069553544*^9}, {
+   3.857460231581233*^9, 3.8574602340627356`*^9}, {3.8574603261022916`*^9, 
+   3.857460580578829*^9}, {3.857460636822029*^9, 3.857460771906945*^9}, 
+   3.857460850554138*^9, {3.857461349941808*^9, 3.857461351139855*^9}, {
+   3.8574614647117195`*^9, 3.857461465412529*^9}, {3.8574617303597183`*^9, 
+   3.857461732857522*^9}, {3.857461910426225*^9, 3.857461920089078*^9}, {
+   3.8574620648051567`*^9, 3.8574621394337254`*^9}, {3.857462201323616*^9, 
+   3.857462257640704*^9}, {3.857462304392133*^9, 3.8574624661404905`*^9}, {
+   3.857462496689062*^9, 3.8574626983177447`*^9}, 3.8574627634865036`*^9, {
+   3.857462844115223*^9, 
+   3.857462896326743*^9}},ExpressionUUID->"0b6b560e-1784-44d6-9fa3-\
+1e45e74b3574"]
+},
+WindowSize->{718.5, 741.},
+WindowMargins->{{-5.25, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (February 4, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9e7b1431-3110-4f15-8ad2-4a647ab338f3"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6821, 193, 771, "Input",ExpressionUUID->"0b6b560e-1784-44d6-9fa3-1e45e74b3574"]
+}
+]
+*)
+
